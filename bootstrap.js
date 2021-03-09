@@ -55,6 +55,9 @@
 /******/ 		"../pkg/wasm_pie_bg.wasm": function() {
 /******/ 			return {
 /******/ 				"./wasm_pie_bg.js": {
+/******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
+/******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
+/******/ 					},
 /******/ 					"__wbindgen_object_drop_ref": function(p0i32) {
 /******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbindgen_object_drop_ref"](p0i32);
 /******/ 					},
@@ -81,9 +84,6 @@
 /******/ 					},
 /******/ 					"__wbindgen_is_undefined": function(p0i32) {
 /******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbindgen_is_undefined"](p0i32);
-/******/ 					},
-/******/ 					"__wbindgen_string_new": function(p0i32,p1i32) {
-/******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbindgen_string_new"](p0i32,p1i32);
 /******/ 					},
 /******/ 					"__wbg_new_5c43423e355e07f2": function() {
 /******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbg_new_5c43423e355e07f2"]();
@@ -127,14 +127,29 @@
 /******/ 					"__wbg_length_77800d12ae1a0d8a": function(p0i32) {
 /******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbg_length_77800d12ae1a0d8a"](p0i32);
 /******/ 					},
+/******/ 					"__wbg_instanceof_Int32Array_6b4cadec828600f8": function(p0i32) {
+/******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbg_instanceof_Int32Array_6b4cadec828600f8"](p0i32);
+/******/ 					},
 /******/ 					"__wbg_newwithlength_e0c461e90217842c": function(p0i32) {
 /******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbg_newwithlength_e0c461e90217842c"](p0i32);
 /******/ 					},
 /******/ 					"__wbg_subarray_8a52f1c1a11c02a8": function(p0i32,p1i32,p2i32) {
 /******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbg_subarray_8a52f1c1a11c02a8"](p0i32,p1i32,p2i32);
 /******/ 					},
+/******/ 					"__wbg_instanceof_Float64Array_542d9abc1f73f8cf": function(p0i32) {
+/******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbg_instanceof_Float64Array_542d9abc1f73f8cf"](p0i32);
+/******/ 					},
+/******/ 					"__wbg_get_a96a2f48856bb1c3": function(p0i32,p1i32) {
+/******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbg_get_a96a2f48856bb1c3"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_number_get": function(p0i32,p1i32) {
+/******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbindgen_number_get"](p0i32,p1i32);
+/******/ 					},
 /******/ 					"__wbindgen_throw": function(p0i32,p1i32) {
 /******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbindgen_throw"](p0i32,p1i32);
+/******/ 					},
+/******/ 					"__wbindgen_rethrow": function(p0i32) {
+/******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbindgen_rethrow"](p0i32);
 /******/ 					},
 /******/ 					"__wbindgen_memory": function() {
 /******/ 						return installedModules["../pkg/wasm_pie_bg.js"].exports["__wbindgen_memory"]();
@@ -240,7 +255,7 @@
 /******/ 				promises.push(installedWasmModuleData);
 /******/ 			else {
 /******/ 				var importObject = wasmImportObjects[wasmModuleId]();
-/******/ 				var req = fetch(__webpack_require__.p + "" + {"../pkg/wasm_pie_bg.wasm":"db4133ae00d6a013c327"}[wasmModuleId] + ".module.wasm");
+/******/ 				var req = fetch(__webpack_require__.p + "" + {"../pkg/wasm_pie_bg.wasm":"820e4b1ff061614d34e7"}[wasmModuleId] + ".module.wasm");
 /******/ 				var promise;
 /******/ 				if(importObject instanceof Promise && typeof WebAssembly.compileStreaming === 'function') {
 /******/ 					promise = Promise.all([WebAssembly.compileStreaming(req), importObject]).then(function(items) {
@@ -341,7 +356,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/* WEBPACK VAR INJECTION */(function(process) {init();\n\n// that no one else needs to worry about it again.\nasync function init() {\n  if (typeof process == \"object\") {\n      // We run in the npm/webpack environment.\n      const [wasm, {main, setup}] = await Promise.all([\n          __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! wasm-game-of-life */ \"../pkg/wasm_pie.js\")),\n          Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./index.js */ \"./index.js\")),\n      ]);\n      setup(wasm);\n      main();\n  } else {\n      const [{Chart, test, default: init}, {main, setup}] = await Promise.all([\n          __webpack_require__.e(/*! import() */ 0).then(__webpack_require__.bind(null, /*! ../pkg/wasm_pie.js */ \"../pkg/wasm_pie.js\")),\n          Promise.all(/*! import() */[__webpack_require__.e(2), __webpack_require__.e(1)]).then(__webpack_require__.bind(null, /*! ./index.js */ \"./index.js\")),\n      ]);\n      await init();\n      setup(Chart);\n      main();\n  }\n}\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/process/browser.js */ \"./node_modules/process/browser.js\")))\n\n//# sourceURL=webpack:///./bootstrap.js?");
+eval("/* WEBPACK VAR INJECTION */(function(process) {init();\n\n// that no one else needs to worry about it again.\nasync function init() {\n  if (typeof process == \"object\") {\n      // We run in the npm/webpack environment.\n      const [wasm, {main, setup}] = await Promise.all([\n          Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! wasm-pie */ \"../pkg/wasm_pie.js\")),\n          Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ./index.js */ \"./index.js\")),\n      ]);\n      setup(wasm);\n      main();\n  } else {\n      const [{Chart, test, default: init}, {main, setup}] = await Promise.all([\n          Promise.all(/*! import() */[__webpack_require__.e(0), __webpack_require__.e(3)]).then(__webpack_require__.bind(null, /*! ../pkg/ */ \"../pkg/wasm_pie.js\")),\n          Promise.all(/*! import() */[__webpack_require__.e(1), __webpack_require__.e(0), __webpack_require__.e(2)]).then(__webpack_require__.bind(null, /*! ./index.js */ \"./index.js\")),\n      ]);\n      await init();\n      setup(Chart);\n      main();\n  }\n}\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/process/browser.js */ \"./node_modules/process/browser.js\")))\n\n//# sourceURL=webpack:///./bootstrap.js?");
 
 /***/ }),
 
